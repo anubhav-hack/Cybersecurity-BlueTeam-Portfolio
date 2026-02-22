@@ -21,7 +21,7 @@ This simulates real-world SOC analyst responsibilities.
 
 **Index:** `botsv1`  
 **Log Source:** `WinEventLog:Security`  
-
+**Web Logs:** `stream:http`
 
 ---
 
@@ -32,7 +32,7 @@ index=botsv1 source="WinEventLog:Security" EventCode=4624
 | stats count as Total_Logons
 ```
 
- **Visualization:** Single Value (Blue)  
+**Visualization:** Single Value (Blue)  
  **Purpose:** Monitor total successful authentication events.
 
 ---
@@ -44,7 +44,7 @@ index=botsv1 source="WinEventLog:Security" EventCode=4776
 | stats count as Successful_Auth
 ```
 
-**Visualization:** Single Value (Green)  
+ **Visualization:** Single Value (Green)  
  **Purpose:** Track NTLM authentication attempts.
 
 ---
@@ -73,7 +73,7 @@ index="botsv1" source="wineventlog:security" EventCode=4624
  **Visualization:** Horizontal Bar Chart  
  **Purpose:** Identify high-volume authentication accounts.
 
- Helps detect:
+**Helps detect:**
 - Compromised accounts
 - Service account misuse
 - Brute force success
@@ -99,7 +99,7 @@ index="botsv1" source="wineventlog:security" EventCode=4624
 
 ---
 
-#  6 Authentication Trend Over Time
+# 6 Authentication Trend Over Time
 
 ```spl
 index=botsv1 source="WinEventLog:Security" EventCode=4624
@@ -124,7 +124,7 @@ index=botsv1 source="WinEventLog:Security" EventCode=4688
 | stats count by New_Process_Name
 ```
 
-**Visualization:** Column Chart  
+ **Visualization:** Column Chart  
  **Purpose:** Detect suspicious command-line activity.
 
  Common abuse tools:
@@ -156,12 +156,12 @@ index=botsv1 source="WinEventLog:Security" EventCode=4656
 
 This dashboard covers:
 
--  Valid Account Abuse (T1078)
--  Privilege Escalation
--  Credential Access
--  Suspicious Process Execution
--  Lateral Movement Indicators
--  Brute Force Indicators
+- ✅ Valid Account Abuse (T1078)
+- ✅ Privilege Escalation
+- ✅ Credential Access
+- ✅ Suspicious Process Execution
+- ✅ Lateral Movement Indicators
+- ✅ Brute Force Indicators
 
 ---
 
@@ -176,16 +176,17 @@ This dashboard covers:
 
 ---
 
-#  Screenshots
+# Dashboard Screenshots
 
 Dashboard screenshots stored in:
 
-![Splunk Query](screenshots/S9.png)
-![Splunk Query](screenshots/S10.png)
-![Splunk Query](screenshots/S11.png)
+![Splunk Query](../screenshots/S9.png)
+![Splunk Query](../screenshots/S10.png)
+![Splunk Query](../screenshots/S11.png)
+
 ---
 
-# 🚀 Conclusion
+#  Conclusion
 
 This project demonstrates hands-on SOC Level 1 capabilities including:
 
