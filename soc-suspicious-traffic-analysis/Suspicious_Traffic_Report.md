@@ -13,8 +13,6 @@
 
 ## 1. Executive Summary
 
-## 1. Executive Summary
-
 This report presents the analysis of network traffic captured in the 
 `dns.pcap` file to identify suspicious activity and potential covert 
 communication mechanisms.
